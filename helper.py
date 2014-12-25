@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: UTF-8 -*-
 #
 # Nemo integration for Beyond Compare 3
 #
@@ -10,6 +11,7 @@
 import os
 import sys
 import errno
+import codecs
 import re
 
 # Define path for nemo actions. 
@@ -22,7 +24,7 @@ act_lhs = os.path.join(acts, 'bc-lhs.na')
 act_rhs = os.path.join(acts, 'bc-rhs.na')
 
 # Define the path for holding the lhs state.
-temp = os.path.expanduser('~/tmp/bcompare')
+temp = os.path.expanduser('/tmp/bcompare')
 state = os.path.join(temp, 'state.txt')
 
 # The nemo action must pass the helper script exactly two arguments.
@@ -48,7 +50,7 @@ if len(sys.argv)==3:
 			# Be liberal in what we accept, and conservative in what we generate.
 			lines = [line for line in open(act_rhs, 'r')]
 			pat = r'^([\ \t])*Name([\ \t])*=.*'
-			lines = [re.sub(pat,'Name=Compare to '+os.path.basename(sys.argv[2]), line) for line in lines]
+			lines = [re.sub(pat,'Name=跟 "'+os.path.basename(sys.argv[2])+'" 比较', line) for line in lines]
 			with open(act_rhs, 'w') as f:
 				for line in lines:
 					f.write(line)

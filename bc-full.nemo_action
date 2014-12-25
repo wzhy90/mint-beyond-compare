@@ -1,6 +1,6 @@
 [Nemo Action]
-Name=Compare
-Comment=Compare the two selected items
+Name=比较文件
+Comment=比较2个已选择文件
 Exec=bcompare %F
 Icon-Name=bcomparefull32
 Selection=2

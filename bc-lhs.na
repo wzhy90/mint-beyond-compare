@@ -1,6 +1,6 @@
 [Nemo Action]
-Name=Select Left Side...
-Comment=Select left side for comparison
+Name=选择左边文件...
+Comment=选择左边需要比较的文件
 Exec=<helper.py -l %F>
 Icon-Name=bcomparehalf32
 Selection=S
