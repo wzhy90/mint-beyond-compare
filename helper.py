@@ -24,7 +24,7 @@ act_lhs = os.path.join(acts, 'bc-lhs.na')
 act_rhs = os.path.join(acts, 'bc-rhs.na')
 
 # Define the path for holding the lhs state.
-temp = os.path.expanduser('/tmp/bcompare')
+temp = os.path.expanduser('~/.cache/bcompare')
 state = os.path.join(temp, 'state.txt')
 
 # The nemo action must pass the helper script exactly two arguments.
